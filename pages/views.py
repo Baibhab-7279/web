@@ -89,7 +89,7 @@ def home(request):
     
 
     global title2
-    title1 = Title.objects.last()
+    title1 = "trail" #Title.objects.last()
 
     if(title1):
         ch["title"] = title1
