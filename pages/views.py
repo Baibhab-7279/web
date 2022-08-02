@@ -32,32 +32,32 @@ def home(request):
 
 
     a = UserData.objects.filter(choise="public").values("image", "blogtext","email")
-
-    c = []
-    d = []
-    for i in range(len(a)-1,-1,-1):
-        b = a[i]
-        
-        c.append(b["image"])
-        # print(c)
-        e = b["blogtext"]
-
-        f = b["email"]
-        g = f.split("@")
-        h = f"{g[0]}.jpg"
-
-        c.append(e)
-        c.append(h)
-        d.append(c)
-        # print(d)
-        c = []
-        # c.append(b["image"])
-        # d.append(b["blogtext"])
-    
-
-    ch = check()
-    # ch["images"] = c
-    ch["content"] = d
+#
+#    c = []
+#    d = []
+#    for i in range(len(a)-1,-1,-1):
+#        b = a[i]
+#        
+#        c.append(b["image"])
+#        # print(c)
+#        e = b["blogtext"]
+#
+#        f = b["email"]
+#        g = f.split("@")
+#        h = f"{g[0]}.jpg"
+#
+#        c.append(e)
+#        c.append(h)
+#        d.append(c)
+#        # print(d)
+#        c = []
+#        # c.append(b["image"])
+#        # d.append(b["blogtext"])
+#    
+#
+#    ch = check()
+#    # ch["images"] = c
+#    ch["content"] = d
 
     if(ans == True):
         a1 = UserData.objects.filter(choise="private").values("image", "blogtext","email")
