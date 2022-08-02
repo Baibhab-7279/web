@@ -32,9 +32,9 @@ def home(request):
 
 
     a = UserData.objects.filter(choise="public").values("image", "blogtext","email")
-#
-#    c = []
-#    d = []
+
+    c = []
+    d = []
 #    for i in range(len(a)-1,-1,-1):
 #        b = a[i]
 #        
