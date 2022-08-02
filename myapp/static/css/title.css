@@ -1,0 +1,43 @@
+
+body{
+    background-color: rgb(230, 215, 215);
+}
+
+.titlechange{
+    width: 300px;
+    height: 400px;
+    margin: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgb(247, 247, 148);
+}
+
+.titlewarning{
+    color: red;
+    margin-top: 30px;
+}
+
+.titleform{
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.titleinp{
+    width: 250px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+.titlesubmit{
+    background-color: rgb(240, 95, 95);
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 74px;
+    margin-right: auto;
+    border-radius: 25px;
+}

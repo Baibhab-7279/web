@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if alertmessage %}
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        {{ alertmessage }}
+    </div>
+    {% endif %}
+
+    <div class="signinmaindiv">
+        <p id="headerofsignin">welcome</p>
+        <form action="/signup" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="signin_1" id="lo_11">
+                <legend>Signup</legend>
+                <div id="p_lo_11">
+                    {{ profileform.as_p }}
+                    <div><button id="signupbutton" type="submit">submit</button></div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

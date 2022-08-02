@@ -1,0 +1,31 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/title.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="titlechange">
+        <div class="titlewarning">**warning it will change the title of the website,and it is not for the normal user as it is comes under
+            the developer options.</div>
+        <div class="titleform">
+            <form action="/title" method="post">
+                {% csrf_token %}
+                <div><input type="text" class="titleinp" placeholder="title of the website" name="titleinput"></div>
+                <div><input type="password" class="titleinp" placeholder="password" name="titlepassword"></div>
+                <button type="submit" class="titlesubmit">submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

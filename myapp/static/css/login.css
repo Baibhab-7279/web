@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(146, 142, 142);
+}
+
+a:link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+}
+
+.loginmaindiv{
+    position: absolute;
+    height: 350px;
+    width: 290px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+    background-color: rgb(222 222 196);
+    border-radius: 25px;
+}
+
+#headeroflogin{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.log_in_1{
+    width: 240px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.loginput{
+    margin-bottom: 10px;
+}
+
+.login_bu{
+    float: right;
+    margin: 1px;
+    width: 55px;
+}
+
+#login{
+    margin-right: 15px;
+}
+
+#loginmsg{
+    text-align: center;
+}

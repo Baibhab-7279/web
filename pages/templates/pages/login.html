@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loginmaindiv">
+        <p id="headeroflogin">welcome</p>
+        <form action="/login" method="post">
+            {% csrf_token %}
+            <fieldset class="log_in_1" id="lo_11" >
+                <legend>login</legend>
+                <div id="p_lo_11">
+                    <label class="loginput" for="username">username</label>
+                    <input class="loginput" type="text" placeholder="user name" required="required" id="in_lo_1" name="username"><br>
+                    <label class="loginput" for="password">password</label>
+                    <input class="loginput" type="password" placeholder="password" name="password" maxlength="4" id="password"><br>
+                    <button class="login_bu" id="login"><a href="/login"></a>login</button>
+                    <button class="login_bu" id="signp"><a href="/signup">signup</a></button>
+                </div>
+            </fieldset>
+        </form>
+        <p id="loginmsg">hello,welcome to a different world</p>    
+    </div>
+</body>
+</html>

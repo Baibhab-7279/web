@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="contactform">
+    <form action="/contact" method="post">
+    {% csrf_token %}
+        <div class="formname">contact form</div>
+        <div>
+            <input class="inputform" type="text" id="name_co" name="name_co" placeholder="name">
+        </div>
+        <div>
+            <input class="inputform" type="text" id="email" name="email" placeholder=".....@gmail.com">
+        </div>
+        <div>
+            <input class="inputform" type="text" id="subject" name="subject" placeholder="subject">
+        </div>
+        <div>
+            <input class="inputform" type="text" id="message" name="message" placeholder="any message">
+        </div>
+        <button id="contactsubmitbutton" type="submit">submit</button>
+    </form>
+</div>
+{% endblock content %}
+

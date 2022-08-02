@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+<div>
+    <div class="seondarynavbar">
+    </div>    
+    <div class="maincontent">
+        {% if content %}
+	    {% for image,blogtext,homeprofileimage in content %}
+        <div class="displayprofile">
+            <div class="displayprofile1">
+                <img class="homeprofileimage" src="media/profileimage/{{ homeprofileimage }}" alt="sorry">
+                <div class="homeprofilename">{{ username }} <div id="homeprofileblogtext"> <p>{{ blogtext|safe }}</p> </div> </div>
+            </div>
+            <img class="homeimage" src="media/{{ image }}" alt="{{ image }}">
+        </div>
+	    {% endfor %}
+        {% else %}
+	    <p>No image available.</p>
+        {% endif %}
+    </div>    
+</div>
+
+{% endblock content %}
+

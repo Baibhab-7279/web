@@ -1,0 +1,106 @@
+body{
+    
+    background-color: rgb(189, 183, 183);
+}
+
+.alert{
+    padding: 20px;
+    background-color: #e46b63;
+    color: white;
+    width: 230px;
+    margin: auto;
+  }
+  
+  .closebtn{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover{
+    color: black;
+  }
+
+a:link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+}
+
+.signinmaindiv{
+    position: absolute;
+    height: 450px;
+    width: 290px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+    background-color: rgb(222 222 196);
+    border-radius: 25px;
+    justify-content: center;
+}
+
+#headerofsignin{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.signin_1{
+    border-radius: 10px;
+}
+
+.profile{
+    border-radius: 10px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+#id_username,#id_email{
+    width: 240px;
+    margin-left: 1px;
+}
+
+#id_semester{
+    margin-left: 1px;
+}
+
+#id_gender{
+    margin-left: 12px;
+}
+
+#signupbutton{
+    margin-left: 188px;
+}
+
+@media screen and (max-width: 700px) {
+    .alert{
+        padding: 20px;
+        background-color: #e46b63;
+        color: white;
+        width: 230px;
+        margin: auto;
+      }
+      
+      .closebtn{
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      .closebtn:hover{
+        color: black;
+      }
+}

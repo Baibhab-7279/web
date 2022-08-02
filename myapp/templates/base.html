@@ -1,0 +1,73 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block title %}
+    <div class="maintitle" id="maintitle1">
+        <div class="secondarytitle" id="secondarytitle1">
+            <div><img class="mainlogo" id="mainlogo1" src="{% static 'images/logo.png' %}" alt="sorry"></div>
+            <div id="maintitle">{{ title }}</div>
+        </div>
+        {% if ans %}
+        <div class="fourthtitle" id="fourthtitle1">
+
+            {% if profileimage %}
+            <img class="fourthtitleimage" src="media/profileimage/{{ profileimage }}" alt="{{ profileimage }}">
+
+            {% elif gender == "female" %}
+            <img class="fourthtitleimage" id="fourthtitleimage1" src="{% static 'images/femaleprofile.jpg' %}"
+                alt="sorry">
+
+            {% else %}
+            <img class="fourthtitleimage" id="fourthtitleimage2" src="{% static 'images/maleprofile.png' %}"
+                alt="sorry">
+
+            {% endif %}
+
+            <div class="fourthtitleuserprofile" id="fourthtitleuserprofile1">
+                <div>{{ username }}</div>
+                <div>{{ email }}</div>
+                <div>{{ semester }} sem</div>
+                <div id="baselogoutbutton"><a href="/logout">logout</a></div>
+            </div>
+        </div>
+
+        {% else %}
+        <div class="tertiarytitle" id="login"><a href="/login">login</a></div>
+        {% endif %}
+
+    </div>
+    {% endblock title %}
+
+    {% block navbar %}
+    <div class="navbar" id="navbar1">
+        <div class="navbaritem" id="navbaritem1"><a href="/">home</a></div>
+        <div class="navbaritem" id="navbaritem2"><a href="/contact">contact</a></div>
+        <div class="navbaritem" id="navbaritem3"><a href="/aboutus">aboutus</a></div>
+        <div class="navbaritem" id="navbaritem4"><a href="/upload">upload</a></div>
+
+        <!--<div class="navbaritem" id="navbaritem5"><input type="search" placeholder="search"></div>-->
+    </div>
+    {% endblock navbar %}
+
+    {% block content %}
+    <p>this is by default</p>
+    {% endblock content %}
+
+    {% block footer %}
+    {% endblock footer %}
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="aboutusmaintitle">
+        <img class="aboutusprofileimage" src="{% static 'images/profilepic.jpg' %}" alt=" sorry">
+        <div class="aboutusmainprofilename">
+            @Baibhab kumar pradhan
+        </div>
+        <div class="aboutusparagraph">
+            <p>
+                Hi, I welcome you here, <br>
+                It’s my pleasure that you have visited here.<br>
+                Let me introduce you to myself,<br>
+                It’s me Baibhab Kumar Pradhan student at Manipal school of architecture and planning.<br>
+                As this is a trial website, please feel free to advise for the betterment of the website through the
+                contact option in the navigation bar. <br><br>
+
+                And also you can contact me from the below options.
+                <br><br>
+
+                thank you.
+
+            </p>
+
+            <div class="aboutfootercontact">contact</div>
+
+            <div class="aboutfooterapp">
+                <div class="aboutfooterapplink"><a
+                        href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#drafts?compose=GTvVlcSMVxpDSVwMGtxPdVxsWQBMxklvMSWcBBrqXHFQthHdBfLNFPpfKfmFdGlnvsqRlbzXdBsWR"><img
+                            class="aboutfooterappimage" src="{% static 'images/gmail.jpg' %}" alt=""></a></div>
+                <div class="aboutfooterapplink"><a href="https://www.instagram.com/baibhabpradhan/"><img
+                            class="aboutfooterappimage" src="{% static 'images/instagram.jpg' %}" alt=""></a></div>
+                <div class="aboutfooterapplink"><a href="https://www.facebook.com/profile.php?id=100018074554875"><img
+                            class="aboutfooterappimage" src="{% static 'images/facebook.jpg' %}" alt=""></a></div>
+                <div class="aboutfooterapplink"><a href="https://github.com/Baibhab-7279"><img
+                            class="aboutfooterappimage" src="{% static 'images/github.jpg' %}" alt=""></a></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+    {% endblock content %}
+</body>
+
+</html>
