@@ -58,7 +58,7 @@ def home(request):
     ch = check()
     # ch["images"] = c
     ch["content"] = d
-    
+
     if(ans == True):
         a1 = UserData.objects.filter(choise="private").values("image", "blogtext","email")
         print(a)
@@ -89,7 +89,7 @@ def home(request):
     
 
     global title2
-    title1 = "trail" #Title.objects.last()
+    title1 =  Title.objects.last()
 
     if(title1):
         ch["title"] = title1
