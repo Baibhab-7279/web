@@ -10,6 +10,7 @@ from .models import Page, Contactform, Profile, Title, UserData
 username = "Baibhab@7279"
 password = "Baibhab@7279"
 title2 = "post it"
+title3 = "post it"
 ans = False
 gender = "male"
 semester = "first"
@@ -89,13 +90,13 @@ def home(request):
     
 
     global title2
-    title1 =  Title.objects.last()
+    title2 =  Title.objects.last()
 
-    if(title1):
-        ch["title"] = title1
+    if(title2):
+        ch["title"] = title2
 
     else:
-        ch["title"] = title2
+        ch["title"] = title3
 
     return render(request, 'pages/home.html', ch)
 
