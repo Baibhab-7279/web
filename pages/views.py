@@ -30,6 +30,15 @@ def home(request):
 
     # ch["images"] = img_list
 
+    global title2
+    title2 =  Title.objects.last()
+
+    if(title2):
+        ch["title"] = title2
+
+    else:
+        ch["title"] = "post-it"
+
 
 
     a = UserData.objects.filter(choise="public").values("image", "blogtext","email")
@@ -89,15 +98,7 @@ def home(request):
         return render(request, 'pages/home.html', ch)
     
 
-    global title2
-    title2 =  Title.objects.last()
-
-    if(title2):
-        ch["title"] = title2
-
-    else:
-        ch["title"] = title3
-
+    
     return render(request, 'pages/home.html', ch)
 
 
